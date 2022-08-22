@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "img.h"
 
 /*
  * Program version.
@@ -108,9 +109,6 @@ void output_gif_dimensions(const char *path) {
  * Output PNG dimensions for `path`.
  */
 
-struct image_dimensions_t {
-  int width, height;
-};
 
 struct image_dimensions_t *get_png_dimensions(const char *path){
   char buf[8];
